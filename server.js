@@ -2,21 +2,9 @@ var express = require('express');
 var app = express();
 var PORT = process.env.PORT || 3000;
 
+var middlewear = require('./middlewear');
 
-var middleware = {
-	requireAuthentication: function (req, res, next) {
-         console.log('private route hit!');
-         next();
-	},
-	logger: function(req,res,next) {
-		//var theDate = new Date().toString();
-		var theDate = new Date();
-		console.log('Request at Date: <<'+theDate.getFullYear()+'/'+theDate.getMonth()+'/'+theDate.getDate()+' '+theDate.getMinutes()+':'+theDate.getSeconds()+':'+theDate.getMilliseconds()+'>> Method: <<' + req.method + '>> Original Url: <<'+ req.originalUrl+'>>');
-		next();
-	}
-}
-
-app.use(middleware.logger);
+app.use(middlewear.logger);
 
 //console.log(PORT);
 
@@ -26,7 +14,7 @@ app.use(middleware.logger);
 
 // });
 
-app.get('/about', middleware.requireAuthentication, function (req, res){
+app.get('/about', middlewear.requireAuthentication, function (req, res){
 	res.send('About us!');
 });
 

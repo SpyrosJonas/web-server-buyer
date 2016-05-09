@@ -15,5 +15,9 @@ git rm --cached -r node_moules
 create file .gitignore which contains which files directories to ingnore
 node_modules/
 
+--First Commit
+git commit -a -m "Initialize repo"
+
+//-add and commit with -m message
 
 
