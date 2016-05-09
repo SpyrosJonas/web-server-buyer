@@ -20,4 +20,9 @@ git commit -a -m "Initialize repo"
 
 //-add and commit with -m message
 
+git remote origin https://github.com/SpyrosJonas/web-server-buyer.git
+
+git push -u origin -master
+
+
 
