@@ -1,0 +1,19 @@
+git config --global user.name "Spyros Jonas"
+git config --global user.email "spyrosjonas@hotmail.com"
+git config --global push.default matching
+git config --global alias.co checkout
+
+Then under the directory of the project:
+git init
+
+git add .
+
+//this includes the node_modules which is not needed...
+
+git rm --cached -r node_moules
+
+create file .gitignore which contains which files directories to ingnore
+node_modules/
+
+
+
