@@ -19,10 +19,20 @@ node_modules/
 git commit -a -m "Initialize repo"
 
 //-add and commit with -m message
-
+//heroku
+heroku --version
+heroku apps
+heroku create
+heroku open
+git remote -v
+git push heroku master
 git remote origin https://github.com/SpyrosJonas/web-server-buyer.git
-
+// opens browser with -->  https://git.heroku.com/shrouded-sierra-15694.git
 git push -u origin -master
 
+heroku open
 
+https://shrouded-sierra-15694.herokuapp.com/
+//for heroku
+git push 
 
